@@ -1,8 +1,8 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
-  return (<div>
-    
-  </div>);
+  return (
+    <main>
+      <h1 className='title'>Apple Fresh</h1>
+      <p className='title-sub'>by nanana</p>
+    </main>
+  );
 }
