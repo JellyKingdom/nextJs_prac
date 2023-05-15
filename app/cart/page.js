@@ -18,6 +18,8 @@ import Test from "./test";
 // - js기능이 필요한 곳
 
 export default function Cart() {
+
+  let items = ['Tomatoes', 'Pasta']
   return (
     <div>
         <Test/>
@@ -27,7 +29,7 @@ export default function Cart() {
         <p>$40</p>
         <p>1개</p>
       </div>
-      <CartItem/>
+      <CartItem items={items}/>
     </div>
   );
 }
@@ -35,9 +37,16 @@ export default function Cart() {
 function CartItem(props) {
   return (
     <div className='cart-item'>
-      <p>상품명</p>
+      <p>{props.items[0]}</p>
       <p>$40</p>
-      <p>1개</p>
+      <Btn color='blue'/>
     </div>
   );
+}
+
+
+function Btn(props){
+  return(<div>
+    <button style={{background:props.color}}>버튼입니다.</button>
+  </div>);
 }
