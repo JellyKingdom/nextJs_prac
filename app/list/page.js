@@ -8,7 +8,8 @@ export default function List() {
 
       {products.map((item, index) => {
         return (
-          <div className='food'>
+          <div className='food' key={index}>
+            <img src={`/food${index}.png`} className="food-img"/>
             <p>{index}</p>
             <h2>{item}</h2>
             <h4>$40</h4>
